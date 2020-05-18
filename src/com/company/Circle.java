@@ -3,6 +3,7 @@ import processing.core.PApplet;
 
 public class Circle extends Shape  {
     private double radius;
+    private ShapeCreator shape = new ShapeCreator();
 
     public Circle(Point center, double radius) {
         super(center);
@@ -17,6 +18,15 @@ public class Circle extends Shape  {
         return 2*Math.PI*radius;
     }
 
-    public void draw() {
+    public float getPositionX() {
+        return (float)getPosition().getX();
+    }
+
+    public float getPositionY() {
+        return (float)getPosition().getY();
+    }
+
+    public void draw(PApplet p) {
+        p.ellipse(getPositionX(), getPositionY(),(float)this.radius,(float)this.radius);
     }
 }

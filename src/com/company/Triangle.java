@@ -1,7 +1,10 @@
 package com.company;
 
+import processing.core.PApplet;
+
 public class Triangle extends Shape {
     double height, base, leftSide, rightSide;
+
 
     public Triangle(Point position, double height, double base, double leftSide, double rightSide) {
         super(position);
@@ -17,5 +20,5 @@ public class Triangle extends Shape {
     public double getPerimeter() {
         return base + leftSide + rightSide;
     }
-    public void draw() {}
+    public void draw(PApplet p) {}
 }

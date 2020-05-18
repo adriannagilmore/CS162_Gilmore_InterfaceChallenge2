@@ -1,6 +1,8 @@
 package com.company;
 
 
+import processing.core.PApplet;
+
 public abstract class Shape implements Comparable<Shape> {
     private Point position;
     private static int numShapes;
@@ -29,7 +31,7 @@ public abstract class Shape implements Comparable<Shape> {
     }
     abstract public double computeArea();
     abstract public double getPerimeter();
-    abstract public void draw();
+    abstract public void draw(PApplet p);
 
     public String toString(){
         return String.format("Shape type: %s, ID: %d, Area: %f, Perimeter: %f", getClass().getName(),id, computeArea(),getPerimeter());
