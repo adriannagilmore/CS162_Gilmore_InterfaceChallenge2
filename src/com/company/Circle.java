@@ -1,6 +1,7 @@
 package com.company;
+import processing.core.PApplet;
 
-public class Circle extends Shape {
+public class Circle extends Shape  {
     private double radius;
 
     public Circle(Point center, double radius) {
@@ -14,5 +15,8 @@ public class Circle extends Shape {
 
     public double getPerimeter() {
         return 2*Math.PI*radius;
+    }
+
+    public void draw() {
     }
 }

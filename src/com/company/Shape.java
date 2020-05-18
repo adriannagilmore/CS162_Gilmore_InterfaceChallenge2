@@ -1,5 +1,6 @@
 package com.company;
 
+
 public abstract class Shape implements Comparable<Shape> {
     private Point position;
     private static int numShapes;
@@ -28,6 +29,7 @@ public abstract class Shape implements Comparable<Shape> {
     }
     abstract public double computeArea();
     abstract public double getPerimeter();
+    abstract public void draw();
 
     public String toString(){
         return String.format("Shape type: %s, ID: %d, Area: %f, Perimeter: %f", getClass().getName(),id, computeArea(),getPerimeter());
